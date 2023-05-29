@@ -1,0 +1,111 @@
+.chatbot {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .chatbot-messages {
+    height: 450px;
+    overflow-y: scroll;
+    border: 1px solid #949494;
+    padding: 10px;
+    margin-top: 50px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .chatbot-messages .message {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    word-wrap: break-word;
+    max-width: 90%;
+    background-color: #111;
+    width: fit-content;
+  }
+  .chatbot-messages::-webkit-scrollbar {
+    width: 12px;
+  }
+  .chatbot-messages::-webkit-scrollbar-track {
+    background-color: #222;
+  }
+  .chatbot-messages::-webkit-scrollbar-thumb {
+    background-color: #777;
+    border-radius: 4px;
+  }
+  .chatbot-messages::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  .chatbot-messages .user {
+    background-color: #44d17a;
+    border-radius: 10px 10px 10px 0px  ;
+  }
+  
+  .chatbot-messages .bot {
+    background-color: #555;
+    align-self: flex-end;
+    border-radius: 10px 10px 0px 10px  ;
+  }
+  
+  .chatbot-form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .chatbot-input {
+    flex: 1;
+    padding: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    border-radius: 5px;
+    min-height: 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  .chatbot-button {
+    background-color: #44d17a;
+    color: #fff;
+    padding: 10px 16px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    border: none ;
+    font-size: 14px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100px;
+  }
+  
+  .chatbot-button:hover {
+    background-color: #4cce3a;
+  }
+
+  .clear-button {
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    border : none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+  }
+
+  .clear-button:hover {
+    background-color: #c82333;
+  }
