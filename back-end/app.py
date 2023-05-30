@@ -10,7 +10,7 @@ model = GPT2LMHeadModel.from_pretrained("gpt2", config=configuration)
 model.resize_token_embeddings(len(tokenizer))
 model.config.pad_token_id = model.config.eos_token_id
 
-model.load_state_dict(torch.load('model553.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load('model372.pth', map_location=torch.device('cpu')))
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -20,11 +20,11 @@ def generate_response(prompt):
     input_ids = tokenizer.encode(prompt, return_tensors='pt').to(device)
     output = model.generate(input_ids=input_ids,
     do_sample=True,
-    top_k=5,
+    top_k=7,
     max_length=50,
-    top_p=0.8,
+    top_p=0.7,
     num_return_sequences=1,
-    temperature=0.2)
+    temperature=0.7)
     response = tokenizer.decode(output[0], skip_special_tokens=False)
     if "<SEP>" in response:
         a,b = response.replace(prompt,"").split("<SEP>") 
@@ -32,6 +32,7 @@ def generate_response(prompt):
         b=response.replace(prompt,"")
     x,y = b.split("<PAD>",1)
     return x.replace("<PAD>","")
+
 
 app = Flask(__name__)
 CORS(app)
