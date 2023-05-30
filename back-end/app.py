@@ -20,9 +20,9 @@ def generate_response(prompt):
     input_ids = tokenizer.encode(prompt, return_tensors='pt').to(device)
     output = model.generate(input_ids=input_ids,
     do_sample=True,
-    top_k=7,
+    top_k=1,
     max_length=50,
-    top_p=0.7,
+    top_p=0.5,
     num_return_sequences=1,
     temperature=0.7)
     response = tokenizer.decode(output[0], skip_special_tokens=False)
