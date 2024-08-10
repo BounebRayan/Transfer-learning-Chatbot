@@ -1,4 +1,4 @@
-﻿### ChatBot PPP RT3
+﻿### ChatBot
 This project is a chatbot application that utilizes a machine learning model trained through transfer learning on GPT-2. It includes both the frontend and backend components necessary to run the chatbot.
 
 
